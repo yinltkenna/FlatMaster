@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.to-do-list {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+button {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btnAdd {
+  background-color: hsl(125, 47%, 54%);
+}
+
+.btnDel {
+  background-color: hsl(125, 47%, 44%);
+}
+
+.btnUp {
+  background-color: hsl(10, 47%, 54%);
+}
+
+.btnDown {
+  background-color: hsl(10, 47%, 40%);
+}
+
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solod hsla(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+ol {
+  padding: 0;
+}
+
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 10px;
+  border: 3px solid hsl(0, 0%, 0.75%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+.btnDel, .btnUp {
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 12px;
+}
