@@ -13,7 +13,7 @@ function ToDoList() {
 
     // 📌 Lấy danh sách tasks từ backend khi load trang
     useEffect(() => {
-        axios.get("http://localhost:5000/tasks")
+        axios.get("https://api.yinkenna.site/tasks")
             .then(response => {
                 console.log("Tasks:", response.data);
                 setTasks(response.data);
@@ -28,7 +28,7 @@ function ToDoList() {
                 const taskId = generateNumericUUID();
                 console.log("Adding task with ID:", taskId);
 
-                const response = await axios.post("http://localhost:5000/tasks", { id: taskId, task: newTask });
+                const response = await axios.post("https://api.yinkenna.site/tasks", { id: taskId, task: newTask });
 
                 console.log("Response:", response.data);
                 setTasks([...tasks, response.data]);
@@ -43,7 +43,7 @@ function ToDoList() {
     const deleteTask = async (id) => {
         try {
             console.log("Deleting task with ID:", id);
-            await axios.delete(`http://localhost:5000/tasks/${id}`);
+            await axios.delete(`https://api.yinkenna.site/tasks/${id}`);
             setTasks(tasks.filter(task => task.id !== id));
         } catch (error) {
             console.error("Error deleting task:", error);
